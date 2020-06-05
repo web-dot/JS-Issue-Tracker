@@ -8,11 +8,11 @@ function fetchIssues () {
   //looping over the elements in issues and adding HTML output for 
   //that element to issuesList.innerHTML
   for (var i = 0; i < issues.length; i++) {
-    var id = issues[i].id;
-    var desc = issues[i].description;
-    var severity = issues[i].severity;
-    var assignedTo = issues[i].assignedTo;
-    var status = issues[i].status;
+    let id = issues[i].id;
+    let desc = issues[i].description;
+    let severity = issues[i].severity;
+    let assignedTo = issues[i].assignedTo;
+    let status = issues[i].status;
 
     issuesList.innerHTML +=   '<div class="well">'+
                               '<h6>Issue ID: ' + id + '</h6>'+
@@ -28,11 +28,11 @@ function fetchIssues () {
 
 
 function saveIssue(e) {
-  var issueId = chance.guid();
-  var issueDesc = document.getElementById('issueDescInput').value;
-  var issueSeverity = document.getElementById('issueSeverityInput').value;
-  var issueAssignedTo =document.getElementById('issueAssignedToInput').value;
-  var issueStatus = 'Open'
+  let issueId = chance.guid();
+  let issueDesc = document.getElementById('issueDescInput').value;
+  let issueSeverity = document.getElementById('issueSeverityInput').value;
+  let issueAssignedTo =document.getElementById('issueAssignedToInput').value;
+  let issueStatus = 'Open'
 
   var issue = {
     id: issueId,
